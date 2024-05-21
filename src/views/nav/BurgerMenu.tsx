@@ -18,7 +18,7 @@ const BurgerMenu: React.FC<{ navData: NavData }> = ({ navData }) => {
   return (
     <div>
       <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <Burger />
+        <Burger className={`${isMenuOpen ? 'fill-orange-500' : ''}`} />
       </button>
       {isMenuOpen && (
         <div className="flex flex-col items-center bg-orange-50 shadow-md rounded-lg p-4 absolute top-16 left-0 right-0 z-50">
@@ -43,7 +43,7 @@ const BurgerMenu: React.FC<{ navData: NavData }> = ({ navData }) => {
                     <div
                       key={`${option.id}-${subOption.id}`}
                       onClick={() => (window.location.href = subOption.path)}
-                      className="hover:text-orange-500 text-gray-500 pl-4 py-1 cursor-pointer"
+                      className="hover:text-orange-500 text-gray-500 text-sm pl-4 py-1 cursor-pointer"
                     >
                       {subOption.name}
                     </div>
