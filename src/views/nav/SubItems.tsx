@@ -1,21 +1,25 @@
+import React from 'react'
 import { NavData } from '../../model/navDataModel'
 
-const SubItems: React.FC<{ subOptions: NavData['options']; className?: string }> = ({
-  subOptions,
-  className
-}) => {
+type SubItemsProps = {
+  subOptions: NavData['options']
+  className?: string
+}
+
+const SubItems: React.FC<SubItemsProps> = ({ subOptions, className }) => {
+  const ulClasses = `${className} absolute w-72 shadow-md rounded-lg bg-orange-50`
+  const liClasses = 'mt-4'
+  const aClasses = 'block cursor-pointer hover:text-orange-500 flex flex-col group'
+  const spanNameClasses = 'font-medium group-hover:text-orange-500'
+  const spanDescriptionClasses = 'text-sm text-gray-500 group-hover:text-orange-500'
+
   return (
-    <ul className={`${className} absolute w-72 shadow-md rounded-lg bg-orange-50`}>
+    <ul className={ulClasses}>
       {subOptions.map(option => (
-        <li key={option.id} className="mt-4">
-          <a
-            className="block cursor-pointer hover:text-orange-500 flex flex-col group"
-            href={option.path}
-          >
-            <span className="font-medium group-hover:text-orange-500">{option.name}</span>
-            <span className="text-sm text-gray-500 group-hover:text-orange-500">
-              {option.description}
-            </span>
+        <li key={option.id} className={liClasses}>
+          <a className={aClasses} href={option.path}>
+            <span className={spanNameClasses}>{option.name}</span>
+            <span className={spanDescriptionClasses}>{option.description}</span>
           </a>
         </li>
       ))}

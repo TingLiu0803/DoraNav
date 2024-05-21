@@ -8,8 +8,10 @@ type MainPageLayoutProps = {
 }
 
 const MainPageLayout: React.FC<MainPageLayoutProps> = ({ children }) => {
+  const containerClasses = 'flex flex-col h-screen lg:py-6 py-4 lg:px-12 px-6'
+
   return (
-    <div className="flex flex-col h-screen py-6 px-12">
+    <div className={containerClasses}>
       <NavbarController />
       <Main>
         <ContentBlock
