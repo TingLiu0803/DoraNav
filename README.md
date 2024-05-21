@@ -2,6 +2,10 @@
 
 Welcome to DoraNav, a meticulously crafted navigation component for web applications, designed and built using React. This project was initiated to address a specific set of functional and technical requirements, aiming to create a versatile and intuitive navigation menu with advanced submenu functionality.
 
+## Live Demo
+
+- **`URL`**: doranav-eric-liu.netlify.app
+
 ## Project Overview
 
 DoraNav demonstrates a commitment to both design excellence and technical robustness, featuring a navigation menu that supports various orientations and styles, catering to diverse design preferences. Each menu item, configurable as a link or a button, supports interactive submenus that appear on hover, implemented to enhance user experience.
@@ -52,12 +56,13 @@ git clone git@github.com:TingLiu0803/DoraNav.git
 ### Install Dependencies
 
 Navigate to the project directory and install the required dependencies:
+- **Install**:
 cd DoraNav
 npm install
 
 ### Running the Project
 
-To start the project locally, run:
+- **Running Project**:
 npm start
 
 
