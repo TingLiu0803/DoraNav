@@ -5,9 +5,7 @@ const SubItems: React.FC<{ subOptions: NavData['options']; className?: string }>
   className
 }) => {
   return (
-    <ul
-      className={`${className} absolute w-72 shadow-md rounded-lg bg-orange-50 opacity-80`}
-    >
+    <ul className={`${className} absolute w-72 shadow-md rounded-lg bg-orange-50`}>
       {subOptions.map(option => (
         <li key={option.id} className="mt-4">
           <a
