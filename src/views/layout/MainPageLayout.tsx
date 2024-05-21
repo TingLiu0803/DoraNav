@@ -1,4 +1,3 @@
-// MainPageLayout.js or MainPageLayout.jsx
 import React from 'react'
 import NavbarController from '../../controllers/NavbarController'
 import Main from './Main'

@@ -1,4 +1,20 @@
-const Button = ({ text, className }: { text: string; className?: string }) => {
+import React from 'react'
+
+type ButtonProps = {
+  text: string
+  className?: string
+  children?: React.ReactNode
+  onClick: () => void // Function that handles click events
+  onKeyDown?: (event: React.KeyboardEvent) => void // Optional function to handle key down events
+}
+
+const Button: React.FC<ButtonProps> = ({
+  text,
+  className = '',
+  children,
+  onClick,
+  onKeyDown
+}) => {
   const baseStyle =
     'bg-orange-500 text-white text-sm px-4 py-2 rounded-lg font-semibold transition duration-300 ease-in-out transform'
   const hoverStyle = 'hover:bg-orange-600'
@@ -9,8 +25,10 @@ const Button = ({ text, className }: { text: string; className?: string }) => {
   return (
     <button
       className={`${baseStyle} ${hoverStyle} ${focusStyle} ${activeStyle} ${className}`}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
     >
-      {text}
+      {children || text}
     </button>
   )
 }

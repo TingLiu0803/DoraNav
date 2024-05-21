@@ -91,7 +91,7 @@
     {
       "id": 4,
       "name": "Hackathons",
-      "path": "/",
+      "path": "/hackathons",
       "description": null,
       "subOptions": []
     }
