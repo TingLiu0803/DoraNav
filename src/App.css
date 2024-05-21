@@ -4,10 +4,33 @@
     transform: rotate(0deg);
   }
   50% {
+    transform: rotate(-6deg);
+  }
+  25% {
     transform: rotate(6deg);
   }
 }
 
+@keyframes rotate-and-move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .animate-rotate-and-back {
-  animation: rotate-and-back 500ms ease-in-out forwards;
+  animation: rotate-and-back 1000ms ease-in-out forwards;
+}
+
+.animate-rotate-and-move {
+  animation: rotate-and-move 1500ms ease-in-out infinite;
+}
+
+.background-image {
+  background-image: url('../public/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

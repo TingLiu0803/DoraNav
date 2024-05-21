@@ -1,5 +1,5 @@
 {
-  "id": 1,
+  "id": 0,
   "options": [
     {
       "id": 1,
@@ -8,15 +8,15 @@
       "description": null,
       "subOptions": [
         {
-          "id": 1,
+          "id": 11,
           "name": "ALL BUIDLs",
           "path": "/buidls",
           "description": "View all BUIDLs",
           "subOptions": []
         },
         {
-          "id": 2,
-          "name": "BUIDL Collections",
+          "id": 12,
+          "name": "BUIDL",
           "path": "/buidl-collections",
           "description": "view specially curated BUIDL",
           "subOptions": []
@@ -30,28 +30,28 @@
       "description": null,
       "subOptions": [
         {
-          "id": 1,
+          "id": 21,
           "name": "ALL Grants",
           "path": "/grants",
           "description": "Support multi-chain innovation and participate in quadratic funding rounds.",
           "subOptions": []
         },
         {
-          "id": 2,
+          "id": 22,
           "name": "Mini Grant",
           "path": "/mini-grants",
           "description": "Support creative but solid ideas from very early-stage hackers teams.",
           "subOptions": []
         },
         {
-          "id": 3,
+          "id": 23,
           "name": "Grant DAOs",
           "path": "/grant-daos",
           "description": "Long-term funding programs and community funding rounds from major blockchain ecosystems.",
           "subOptions": []
         },
         {
-          "id": 4,
+          "id": 24,
           "name": "ATOM Economic Zone Quadratic Grant",
           "path": "/quadratic-grants",
           "description": "Build and contribute to public goods and emerging appchains to expand the AEZ and create a prosperous appchain future.",
@@ -66,21 +66,21 @@
       "description": null,
       "subOptions": [
         {
-          "id": 1,
+          "id": 31,
           "name": "DAO Bounties",
           "path": "/bounties",
           "description": "The best way to work for DAOs, coordinate with the community, and get rewarded.",
           "subOptions": []
         },
         {
-          "id": 2,
+          "id": 32,
           "name": "Mini Bounty",
           "path": "/mini-bounties",
           "description": "Let’s help each other out! Crowdsource solutions and solve challenges to get rewarded.",
           "subOptions": []
         },
         {
-          "id": 3,
+          "id": 33,
           "name": "Bug Bounty",
           "path": "/bug-bounties",
           "description": "View all Bug Bounty",

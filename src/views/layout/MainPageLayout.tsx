@@ -2,7 +2,7 @@ import NavbarController from '../../controllers/NavbarController'
 import Main from './Main'
 
 type MainPageLayout = {
-  children: React.ReactNode
+  children: React.ReactNode | JSX.Element
 }
 
 const MainPageLayout = ({ children }: MainPageLayout) => {
