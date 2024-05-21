@@ -1,3 +1,5 @@
+/** since keyframes are not supported in tailwindcss, we have to use css for animations */
+
 @keyframes rotate-and-back {
   0%,
   100% {

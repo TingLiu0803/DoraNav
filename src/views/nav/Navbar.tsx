@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import '../index.css'
-import { NavData } from '../model/navDataModel'
-import DoraIcon from '../svg/DoraLogo'
-import DownArrow from '../svg/DownArrow'
-import Windows from '../svg/Windows'
+import '../../index.css'
+import { NavData } from '../../model/navDataModel'
+import DoraIcon from '../../svg/DoraLogo'
+import DownArrow from '../../svg/DownArrow'
+import Windows from '../../svg/Windows'
 import SubItems from './SubItems'
-import Button from './Button'
+import Button from '../Button'
+import BurgerMenu from './BurgerMenu'
 
 type LocalStateData = {
   activeOptionId: number | null
@@ -32,7 +33,12 @@ const Navbar: React.FC<{ navData: NavData; localStateData: LocalStateData }> = (
 
   return (
     <nav id={navData.id.toString() + 'nav'} className="flex justify-between w-full">
-      <ul className="flex">
+      <a href="/" className="lg:hidden block">
+        <DoraIcon
+          className={`cursor-pointer transition-transform duration-500 ease-in-out ${isActive ? 'animate-rotate-and-back' : ''}`}
+        />
+      </a>
+      <ul className="lg:flex hidden">
         <a href="/">
           <DoraIcon
             className={`cursor-pointer transition-transform duration-500 ease-in-out ${isActive ? 'animate-rotate-and-back' : ''}`}
@@ -78,9 +84,12 @@ const Navbar: React.FC<{ navData: NavData; localStateData: LocalStateData }> = (
       </ul>
       <div className="flex items-center space-x-4">
         <Button text="Log in" />
-        <div className="flex cursor-pointer">
-          <span className="px-4 py-2 rounded-lg font-medium">Search</span>
+        <div className="lg:flex cursor-pointer hidden">
+          <span className="pr-4 py-2 rounded-lg font-medium">English</span>
           <DownArrow className="mt-3 -ml-2" />
+        </div>
+        <div className="block lg:hidden">
+          <BurgerMenu navData={navData} />
         </div>
       </div>
     </nav>

@@ -1,4 +1,4 @@
-import { NavData } from '../model/navDataModel'
+import { NavData } from '../../model/navDataModel'
 
 const SubItems: React.FC<{ subOptions: NavData['options']; className?: string }> = ({
   subOptions,
